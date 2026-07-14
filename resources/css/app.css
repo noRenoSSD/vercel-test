@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+/* Path bawaan Laravel untuk Pagination & Storage */
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/* Path untuk view Blade & komponen React TypeScript */
+@source "../**/*.blade.php";
+@source "../**/*.tsx";
+@source "../**/*.ts";
+@source "../**/*.js";
+@source "../**/*.jsx";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
