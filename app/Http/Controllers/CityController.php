@@ -30,4 +30,23 @@ class CityController extends Controller
 
         return redirect()->back();
     }
+
+    public function update(Request $request, City $city)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'province' => 'required|string|max:255',
+        ]);
+
+        $city->update($validated);
+
+        return redirect()->back();
+    }
+
+    public function destroy(City $city)
+    {
+        $city->delete();
+
+        return redirect()->back();
+    }
 }
