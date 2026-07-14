@@ -58,7 +58,7 @@ export default function Index({ cities }: Props) {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 p-8">
+        <div className="min-h-screen bg-gray-50 p-4 sm:p-6 md:p-8">
             <Head title="Manajemen Wilayah" />
             
             <div className="max-w-4xl mx-auto space-y-8">
@@ -117,7 +117,8 @@ export default function Index({ cities }: Props) {
 
                 {/* Data Table Section */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                    <table className="w-full text-left border-collapse">
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse whitespace-nowrap">
                         <thead>
                             <tr className="bg-gray-50 text-gray-600 text-sm uppercase tracking-wider">
                                 <th className="px-6 py-4 font-medium">ID</th>
@@ -171,6 +172,7 @@ export default function Index({ cities }: Props) {
                             )}
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>
